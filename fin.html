@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Katik - Kalkulator Matematik</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+      </div>
+    </div>
+  </nav>    
+  <div class="jumbotron text-center">
+    <h1>Katik <small>Kalkulator Matematik</small></h1>            
+  </div>            
+  <div class="container">
+    <div class="homepage">
+      <div class="text-center">
+        <h2>Welcome to Katik</h2>
+        <p>Hai Sobat, Selamat datang di Katik :]</p>
+        <p>Sebuah web app sederhana yang berfungsi untuk menghitung nilai luas dan keliling bangun datar</p>
+      </div>
+  
+      <ul class="nav nav-pills nav-justified">
+        <li class="active">
+          <a data-toggle="pill" href="#square">
+            Persegi
+          </a>
+        </li>
+        <li>
+          <a data-toggle="pill" href="#rectangle">
+            Persegi Panjang
+          </a>
+        </li>
+      </ul>
+  
+      <div class="tab-content">
+        <div id="square" class="tab-pane fade in active">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="panel panel-primary text-center">
+                <div class="panel-heading">
+                  <h2>Luas Persegi</h2>
+                </div>
+                <div class="panel-body">
+                  <p><img src="square.jpg" alt="Luas Persegi"></p>
+                  <div class="form-group">
+                    <label for="sisi-luas">Panjang Sisi:</label>
+                    <input type="number" class="form-control" id="sisi-luas">
+                  </div>
+                  <button class="btn btn-primary" onclick="hitungLuas()">Hitung</button>
+                </div>
+                <div class="panel-footer">
+                  <div class="result-container">
+                    <h4>Hasil:</h4>
+                    <p id="output_luas"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="panel panel-primary text-center">
+                <div class="panel-heading">
+                  <h2>Keliling Persegi</h2>
+                </div>
+                <div class="panel-body">
+                  <p><img src="square.jpg" alt="Keliling Persegi"></p>  
+                  <div class="form-group">
+                    <label for="sisi-keliling">Panjang Sisi:</label>
+                    <input type="number" class="form-control" id="sisi-keliling">
+                  </div>
+                  <button class="btn btn-primary" onclick="hitungKeliling()">Hitung</button>
+                </div>
+                <div class="panel-footer">
+                  <div class="result-container">
+                    <h4>Hasil:</h4>
+                    <p id="output_keliling"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="rectangle" class="tab-pane fade">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="panel panel-primary text-center">
+                <div class="panel-heading">
+                  <h2>Luas Persegi Panjang</h2>
+                </div>
+                <div class="panel-body">
+                  <p><img class="rectangle-image" src="rectangle.jpg" alt="Luas Persegi Panjang"></p>
+                  <div class="form-group">
+                    <label for="length">Panjang:</label>
+                    <input type="number" class="form-control" id="length">
+                  </div>
+                  <div class="form-group">
+                    <label for="width">Lebar:</label>
+                    <input type="number" class="form-control" id="width">
+                  </div>
+                  <button class="btn btn-primary" onclick="calculateRectangleArea()">Hitung</button>
+                </div>
+                <div class="panel-footer">
+                  <div class="result-container">
+                    <h4>Hasil:</h4>
+                    <p id="rectangle-area-result"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="panel panel-primary text-center">
+                <div class="panel-heading">
+                  <h2>Keliling Persegi Panjang</h2>
+                </div>
+                <div class="panel-body">
+                  <p><img class="rectangle-image" src="rectangle.jpg" alt="Keliling Persegi Panjang"></p>
+                  <div class="form-group">
+                    <label for="length">Panjang:</label>
+                    <input type="number" class="form-control" id="length">
+                  </div>
+                  <div class="form-group">
+                    <label for="width">Lebar:</label>
+                    <input type="number" class="form-control" id="width">
+                  </div>
+                  <button class="btn btn-primary" onclick="calculateRectanglePerimeter()">Hitung</button>
+                </div>
+                <div class="panel-footer">
+                  <div class="result-container">
+                    <h4>Hasil:</h4>
+                    <p id="rectangle-perimeter-result"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer text-center">
+    <p>&copy; 2023 Katik. All Rights Reserved.</p>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
